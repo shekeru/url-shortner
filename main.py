@@ -9,6 +9,7 @@ with open('links.json', 'r', encoding='utf-8') as db:
 def generate(mode):
     if mode:
         #TO-DO: make sketchy string
+        pass
     else:
         while True:
             output = ''.join(random.choice(conf.chars) for _ in range(conf.rand_size))
@@ -28,7 +29,7 @@ def geturl(target, mode):
         return 'invalid target!'
     try: mode = int(mode)
     except: return 'invalid mode!'
-        
+
     link = generate(mode)
     links[link] = target
     with open('links.json', 'w', encoding='utf-8') as db:
