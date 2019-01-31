@@ -1,4 +1,4 @@
-from flask import Flask, redirect, abort
+from flask import Flask, redirect
 import random, conf, json
 
 #loading redirect links
@@ -37,10 +37,10 @@ def geturl(target, mode):
 
     return link
 
-#ghetto security
+#ghetto 'security'
 @app.route('/links.json')
 def fuckyou():
-    return 'go commit the big die', 403
+    return 'excuse me sir stop poking around', 403
 
 #to be ran on 5hl.pw
 @app.route('/<destination>')
