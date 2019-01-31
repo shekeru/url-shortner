@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, request
 import random, conf, json
 
 #loading redirect links
@@ -23,18 +23,15 @@ def generate(mode):
 
 app = Flask(__name__)
 application = app # required for passenger_wsgi
-@app.route('/geturl&target=<target>&mode=<mode>')
-def geturl(target, mode):
-    if target is None:
-        return 'invalid target!'
-    try: mode = int(mode)
-    except: return 'invalid mode!'
-
+@app.route('/geturl')
+def geturl():
+    target = request.args.get('target', default = 'https://reasons-to.live/', type = str)
+    mode = request.args.get('mode', default = 0, type = int)
     link = generate(mode)
     links[link] = target
     with open('links.json', 'w', encoding='utf-8') as db:
         json.dump(links,db,ensure_ascii=False,indent=4)
-
+        
     return link
 
 #ghetto 'security'
