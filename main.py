@@ -46,7 +46,6 @@ def geturl():
 def fuckyou():
     return 'excuse me sir stop poking around', 403
 
-#to be ran on 5hl.pw
 @app.route('/<destination>')
 def redir(destination):
     if destination in links: return redirect(links[destination])
