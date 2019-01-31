@@ -39,7 +39,7 @@ def geturl():
         with open('links.json', 'w', encoding='utf-8') as db:
             json.dump(links,db,ensure_ascii=False,indent=4)
 
-    return ''.join(['https://5hl.pw/', link])
+    return ''.join(['5hl.pw/', link])
 
 #ghetto 'security'
 @app.route('/links.json')
