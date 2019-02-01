@@ -71,7 +71,6 @@ legal = [
 ]
 
 hentai = [
-    'blacked',
     'creampie',
     'mindbreak',
     'bondage',
@@ -83,7 +82,6 @@ hentai = [
     'bukkake',
     'underage',
     'jailbait',
-    'hebe',
     'teen',
     'bondage',
     'hardcore',
@@ -117,7 +115,6 @@ tech = [
     'keylogger',
     'backtrack',
     'virus',
-    'trojan',
     'trojan',
     'payload',
     'application',
