@@ -13,7 +13,6 @@ var m0d = "Returns a short link that redirects to the provided URL.";
 window.onload = function()
 {
     //document.getElementById("player").volume = 0;
-    document.getElementById("animfix").style.opacity = 1;
     document.getElementById("mode-desc").innerHTML = m0d;
     document.getElementById("preview-desc").innerHTML = p1d;
     //a clever way to get rid of autofill suggestions
@@ -35,10 +34,9 @@ function getURL()
     Http.send();
     Http.onreadystatechange=(e)=>{
         qresult = Http.responseText;
-        document.getElementById("result-url").setAttribute("href", "https://" + qresult.replace(/['"]+/g, ''));
-        document.getElementById("result-url").innerHTML = qresult.replace(/['"]+/g, '');
+        var html = "<a id=\"result-url\" target=\"_blank\" href=" + "https://" + qresult.replace(/['"]+/g, '') + ">";
+        document.getElementById("title-text").innerHTML = html + qresult.replace(/['"]+/g, '') + "</a>";
     }
-    document.getElementById("result").style.opacity = 1;
 }
 
 function setMode(val)
