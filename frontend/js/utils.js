@@ -35,7 +35,7 @@ function getURL()
     Http.send();
     Http.onreadystatechange=(e)=>{
         qresult = Http.responseText;
-        document.getElementById("result-url").setAttribute("href", qresult.replace(/['"]+/g, ''));
+        document.getElementById("result-url").setAttribute("href", "https://" + qresult.replace(/['"]+/g, ''));
         document.getElementById("result-url").innerHTML = qresult.replace(/['"]+/g, '');
     }
     document.getElementById("result").style.opacity = 1;
