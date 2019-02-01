@@ -7,7 +7,7 @@ var mode = 0
 var allCharactersAlphnum = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 var p0d = "JavaScript redirects will not embed the destination in apps such as Discord.";
 var p1d = "Apache redirects will embed the final destination in apps such as Discord.";
-var m1d = "-UNFINISHED- Returns a sketchy link that redirects to a given URL.";
+var m1d = "Returns a sketchy link that redirects to a given URL.";
 var m0d = "Returns a short link that redirects to the provided URL.";
 
 window.onload = function()
@@ -55,8 +55,7 @@ function setMode(val)
         document.getElementById("mode-desc").innerHTML = m1d;
         document.getElementById("mode-0").style.opacity = 0;
         document.getElementById("mode-1").style.opacity = 1;
-        //currently always sets to mode 0 as mode 1 is unfinished
-        mode = 0;
+        mode = 1;
     }
 }
 
