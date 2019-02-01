@@ -8,7 +8,6 @@ with open('links.json', 'r', encoding='utf-8') as db:
 #mode 0 = shorten, mode 1 = sketchify
 def generate(target, preview, mode):
     if mode:
-        #TO-DO: make sketchy string
         pass
     else:
         #mode 0 doesn't support generation of multiple URL's pointing to the same target
@@ -22,7 +21,8 @@ def generate(target, preview, mode):
                 ind = str(random.random() * 100)
                 output = ''.join([ind[0], output, ind[1]])
             #guarentees each string is unique
-            if not output in links: break
+            if not output in links:
+                break
         return (output, True)
 
 app = Flask(__name__)
@@ -62,6 +62,7 @@ def redir(destination):
     if data[1]: return redirect(data[0])
     #sneaky JS redirect so it can't be previewed as easily
     return ''.join(['<html><head><script>window.location="', data[0], '"</script></head></html>'])
-        
+
 # for testing
-if __name__ == '__main__': app.run()
+if __name__ == '__main__':
+    app.run()
