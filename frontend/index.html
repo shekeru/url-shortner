@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!--remove this & robots.txt for indexing support-->
+        <meta name="robots" content="noindex,nofollow">
+
+        <!--for embedding in apps such as discord-->
+        <link type="application/json+oembed" href="https://reasons-to.live/emb/oembed.json">
+        <meta property="og:image" content="https://reasons-to.live/emb/embed.gif">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="theme-color" content="#DA7289">
+
+        <meta charset='utf-8'>
+        <title>URL Shortener</title>
+        <script src="js/utils.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/ico" href="img/icon.ico">
+
+        <iframe src="audio/init.mp3" allow="autoplay" style="display:none" id="trigger"></iframe>
+	    <audio id="player" autoplay loop><source src="audio/main.mp3" type="audio/mp3"></audio>
+    </head>
+
+    <body>
+    <div id="animfix">
+        <h1 id="text">URL Shortener</h1>
+        <div id="result"><a id="result-url" href="asdf" target="_blank"></a></div>
+        <div id="main">
+            <!--placeholder name is used because it is given a randomized name on page load in utils.js-->
+            <input type="text" name="placeholdername" id="urlinput" placeholder="Enter a URL...">
+            <br/>
+            <button class="enter" onclick="getURL()"><span id="enter">Get URL</span></button>
+            <br/>
+
+            <!--<h2 id="text">Settings</h2>-->
+            <div class="settings" id="mode">
+                <h3 id="text">Mode</h3>
+                <div class="settings-box" id="mode-box">
+                    <button class="switch" onclick="setMode(0)"><span id="current">Shorten</span><p class="selector" id="mode-0">✔</p></button>
+                    <button class="switch" onclick="setMode(1)"><span id="current">Shadify</span><p class="selector" id="mode-1">✔</p></button>
+                    <p id="mode-desc"></p>
+                </div>
+
+            </div>
+            <div class="settings" id="preview">
+                <h3 id="text">Type</h3>
+                <div class="settings-box" id="preview-box">
+                    <button class="switch" onclick="setPreview(1)"><span id="current">Apache</span><p class="selector" id="preview-1">✔</p></button>
+                    <button class="switch" onclick="setPreview(0)"><span id="current">JavaScript</span><p class="selector" id="preview-0">✔</p></button>
+                    <p id="preview-desc"></p>
+                    <!--<img id="preview-img" src="img/apache.png"/>-->
+                </div>
+            </div>
+        </div>
+        <div id="footer"><!--footer stuff to be added--></div>
+    </div>
+    </body>
+</html>

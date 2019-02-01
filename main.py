@@ -1,4 +1,4 @@
-from flask import Flask, redirect, request
+from flask import Flask, redirect, request, jsonify
 import random, conf, json
 
 #loading redirect links
@@ -45,7 +45,9 @@ def geturl():
         with open('links.json', 'w', encoding='utf-8') as db:
             json.dump(links,db,ensure_ascii=False,indent=4)
 
-    return ''.join(['5hl.pw/', link])
+    response = jsonify("".join(['5hl.pw/', link]))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 #ghetto 'security'
 @app.route('/links.json')
