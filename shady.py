@@ -20,7 +20,6 @@ drugs = [
     'pharma',
     'black tar',
     'xanax',
-    'ritalin',
     'adderall',
     'fentanyl',
     'coke',
@@ -43,7 +42,6 @@ drugs = [
 legal = [
     'syria',
     'isis',
-    'border',
     'government',
     'secret',
     'hidden',
@@ -118,7 +116,6 @@ tech = [
     'trojan',
     'payload',
     'application',
-    'overflow',
     'tracker',
     'account',
     'torrent',
