@@ -35,9 +35,9 @@ function getURL()
         qresult = Http.responseText;
         var html = "<a id=\"result-url\" target=\"_blank\" href=" + "https://" + qresult.replace(/['"]+/g, '') + ">";
         document.getElementById("title-text").innerHTML = html + qresult.replace(/['"]+/g, '') + "</a>";
-        if (qresult.length > 108) { document.getElementById("result-url").style.fontSize = "14%"; }
-        else if (qresult.length > 67) { document.getElementById("result-url").style.fontSize = "15%"; }
-        else if (qresult.length > 48) { document.getElementById("result-url").style.fontSize = "25%"; }
+        if (qresult.length > 100) { document.getElementById("result-url").style.fontSize = "14%"; }
+        else if (qresult.length > 60) { document.getElementById("result-url").style.fontSize = "20%"; }
+        else if (qresult.length > 40) { document.getElementById("result-url").style.fontSize = "30%"; }
     }
 }
 
