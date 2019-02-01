@@ -1,4 +1,4 @@
-html { overflow: hidden; font-size: 1vw; }
+html { overflow-x: hidden; font-size: 1vw; }
 body {
     margin: 0px;
     padding: 0px;
@@ -9,19 +9,20 @@ body {
     font-family: 'K2D', sans-serif;
     background-image: url("../img/bgx.gif");
 }
-#main { top: 15%; position: relative; height: 60vw; width: 100vw; z-index: 1; }
+#main { top: 15%; position: relative; height: 33vw; width: 100vw; z-index: 1; }
 p { padding: 1vw; font-size: 1.5vw; text-shadow: 2px 2px 4px rgba(0,0,0,50); color: rgb(253, 253, 253); }
 #heirarchy-fix { position: relative; }
 span { font-size: 1.5vw; text-shadow: 2px 2px 4px rgba(0,0,0,50); }
 #text, #title-text { color: #ffffff; display: block; text-align: center; }
+#title-text { width: 50vw; position: relative; left: 25%; }
 h1 { font-size: 5em; text-shadow: 3px 3px 6px rgba(0,0,0,50); transition: 0s !important; position: relative; }
 h2 { font-size: 4em; text-shadow: 2px 2px 4px rgba(0,0,0,50); position: absolute; top: 5%; left: 42.3%; }
 h3 { font-size: 3em; text-shadow: 2px 2px 4px rgba(0,0,0,50); position: relative; top: 5%; }
 #preview-img { width: 10vw; height: 10vw; }
 /*img { text-align: center; margin: auto; display: block; border-radius: 2vw; padding: 1vw; }*/
 #result { color: #90EE90; text-align: center; display: block; opacity: 0; transition: 0s; }
-#result-url { color: #3366BB; text-decoration: none; }
-.settings { display:inline-block; width: 20vw; height: 20vw; text-align: center; position: relative; top: 10%; }
+#result-url { color: #3366BB; text-decoration: none; width: 50vw !important; font-size: 4vw; white-space: nowrap; }
+.settings { display:inline-block; width: 20vw; height: 20vw; text-align: center; position: relative; top: 5%; }
 #preview { position: absolute; left: 33.8%; }
 #mode { position: absolute; right: 21.3%; }
 #preview-box { position: absolute; right: 32%; }
@@ -39,7 +40,7 @@ h3 { font-size: 3em; text-shadow: 2px 2px 4px rgba(0,0,0,50); position: relative
 }
 .settings-box { 
     width: 16vw;
-    height: 50vw;
+    height: 30vw;
     border-width: 1vw;
     text-align: center;
     border-radius: 2vw;
@@ -72,14 +73,14 @@ h3 { font-size: 3em; text-shadow: 2px 2px 4px rgba(0,0,0,50); position: relative
 }
 .switch:focus { outline: none; }
 .selector { font-size: 1.5vw; display: inline; position: absolute; }
-#current { display: inline; text-align: center; position: absolute; left: 28%; font-size: 2vw; }
-.default { position: absolute; top: 20.8%; }
-.ext-mode { text-align: center; position: absolute; top: 28%; }
-.ext-prev { text-align: center; position: absolute; top: 28%; left: 19.5% !important; }
-#preview-1 { opacity: 1; top: 15.8%; right: 5%; }
-#preview-0 { opacity: 0; top: 23.1%; right: 5%; }
-#mode-0 { opacity: 1; top: 15.8%; right: 5%; }
-#mode-1 { opacity: 0; top: 23.1%; right: 5%;}
+#current { display: inline; text-align: center; position: absolute; left: 28.5%; font-size: 2vw; }
+.default { position: absolute; top: 34.2%; }
+.ext-mode { text-align: center; position: absolute; top: 46.8%; }
+.ext-prev { text-align: center; position: absolute; top: 46.8%; left: 18.9% !important; }
+#preview-1 { opacity: 1; top: 25.9%; right: 5%; }
+#preview-0 { opacity: 0; top: 38.8%; right: 5%; }
+#mode-0 { opacity: 1; top: 25.9%; right: 5%; }
+#mode-1 { opacity: 0; top: 38.8%; right: 5%;}
 input {
     height: 2vw;
     border: none;
@@ -116,3 +117,21 @@ input:focus { outline: none; }
 ::placeholder { color: rgb(253, 253, 253); text-shadow: none; opacity: 0.8; }
 :-ms-input-placeholder { color: rgb(253, 253, 253); text-shadow: none; }
 ::-ms-input-placeholder { color: rgb(253, 253, 253); text-shadow: none; }
+.footer {
+    top: 90%;
+    height: 6vw;
+    color: white;
+    position: fixed;
+    text-align: center;
+}
+#base-footer { width: 100%; font-size: 3vw; padding-top: 1vw; padding-left: 0; padding-right: 0; }
+#left-bar { left: 0; width: 24.96vw; background-color: rgba(0, 0, 0, 0.4); }
+#right-bar { right: 0; width: 25.13vw; background-color: rgba(0, 0, 0, 0.4); }
+#footer-url { color: white; text-decoration: none; position: absolute; left: 70.5%; }
+#logo-desc { color: white; font-size: 1em; text-shadow: 2px 2px 4px rgba(0,0,0,50); position: absolute; top: -90%; left: -310.5%; }
+#footer-music { position: absolute; right: 70.5%; }
+#music-desc { color: white; font-size: 1em; text-shadow: 2px 2px 4px rgba(0,0,0,50); position: absolute; top: -39%; right: 61.1%; }
+#footer-music:hover { cursor: pointer; }
+#footer-music:focus { outline: none; }
+#music-desc:hover { cursor: pointer; }
+#music-desc:focus { outline: none; }

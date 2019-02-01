@@ -17,7 +17,8 @@
         <link rel="icon" type="image/ico" href="img/icon.ico">
 
         <iframe src="audio/init.mp3" allow="autoplay" style="display:none" id="trigger"></iframe>
-	    <!--<audio id="player" autoplay loop><source src="audio/main.mp3" type="audio/mp3"></audio>-->
+        <audio id="player" autoplay loop><source src="audio/main.mp3" type="audio/mp3"></audio>
+        <script>document.getElementById("player").volume = 0;</script>
     </head>
 
     <body>
@@ -30,7 +31,7 @@
                 <br/>
                 <button class="enter" onclick="getURL()"><span id="enter">Get URL</span></button>
             </div>
-            <h2 id="text">Settings</h2>
+            <!--<h2 id="text">Settings</h2>-->
             <div class="settings" id="mode">
                 <div class="settings-box" id="mode-box">
                     <h3 id="text">Mode</h3>
@@ -50,6 +51,19 @@
                 </div>
             </div>
         </div>
-        <div id="footer"><!--footer stuff to be added--></div>
+
+        <div class="footer" id="base-footer">
+            <a id="footer-url" target="_blank" href="https://github.com/shekeru/url-shortner">
+                <img src="img/github.png" style="width: 3.5vw; height: 3.5vw;" />
+                <p id="logo-desc">GitHub</p>
+            </a>
+
+            <img id="footer-music" src="img/mute.png" style="width: 3.5vw; height: 3.5vw;" onclick="toggleMusic()" />
+            <p id="music-desc" onclick="toggleMusic()">Music</p>
+        </div>
+
+        <!--ghetto fix to bar overlap problems-->
+        <!--<div class="footer" id="left-bar"></div>
+        <div class="footer" id="right-bar"></div>-->
     </body>
 </html>

@@ -12,7 +12,6 @@ var m0d = "Returns a short link that redirects to the provided URL.";
 
 window.onload = function()
 {
-    //document.getElementById("player").volume = 0;
     document.getElementById("mode-desc").innerHTML = m0d;
     document.getElementById("preview-desc").innerHTML = p1d;
     //a clever way to get rid of autofill suggestions
@@ -36,6 +35,9 @@ function getURL()
         qresult = Http.responseText;
         var html = "<a id=\"result-url\" target=\"_blank\" href=" + "https://" + qresult.replace(/['"]+/g, '') + ">";
         document.getElementById("title-text").innerHTML = html + qresult.replace(/['"]+/g, '') + "</a>";
+        if (qresult.length > 108) { document.getElementById("result-url").style.fontSize = "14%"; }
+        else if (qresult.length > 67) { document.getElementById("result-url").style.fontSize = "15%"; }
+        else if (qresult.length > 48) { document.getElementById("result-url").style.fontSize = "25%"; }
     }
 }
 
@@ -80,11 +82,13 @@ function toggleMusic()
 {
     if (music == 0)
     {
+        document.getElementById("footer-music").src = "img/unmute.png";
         document.getElementById("player").volume = 0.1;
         music = 1;
     }
     else
     {
+        document.getElementById("footer-music").src = "img/mute.png";
         document.getElementById("player").volume = 0;
         music = 0;
     }
