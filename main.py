@@ -1,5 +1,5 @@
 from flask import Flask, redirect, request, jsonify
-import random, conf, json
+import random, conf, json, shady
 
 #loading redirect links
 with open('links.json', 'r', encoding='utf-8') as db:
@@ -8,7 +8,7 @@ with open('links.json', 'r', encoding='utf-8') as db:
 #mode 0 = shorten, mode 1 = sketchify
 def generate(target, preview, mode):
     if mode:
-        pass
+        return (shady.generate(), True)
     else:
         #mode 0 doesn't support generation of multiple URL's pointing to the same target
         for link, vals in links.items():
