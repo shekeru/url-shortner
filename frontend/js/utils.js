@@ -12,7 +12,7 @@ var m0d = "Returns a short link that redirects to the provided URL.";
 
 window.onload = function()
 {
-    document.getElementById("player").volume = 0;
+    //document.getElementById("player").volume = 0;
     document.getElementById("animfix").style.opacity = 1;
     document.getElementById("mode-desc").innerHTML = m0d;
     document.getElementById("preview-desc").innerHTML = p1d;
