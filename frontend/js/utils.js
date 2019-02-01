@@ -38,6 +38,8 @@ function getURL()
         if (qresult.length > 100) { document.getElementById("result-url").style.fontSize = "14%"; }
         else if (qresult.length > 60) { document.getElementById("result-url").style.fontSize = "20%"; }
         else if (qresult.length > 40) { document.getElementById("result-url").style.fontSize = "30%"; }
+        document.getElementById("copy-button").style.opacity = 1;
+        document.getElementById("copy-text").style.opacity = 1;
     }
 }
 
@@ -91,4 +93,22 @@ function toggleMusic()
         document.getElementById("player").volume = 0;
         music = 0;
     }
+}
+
+function copyURL()
+{   
+    var copy = document.getElementById("result-url").href;
+    var field = document.createElement("textarea");
+    field.style.opacity = 0;
+    field.value = copy;
+    
+    document.body.appendChild(field);
+    field.focus();
+    field.select();
+
+    try {
+        document.execCommand('copy');
+        document.getElementById("copy-text").innerHTML = "Succesfully Copied URL";
+    } catch (err) { document.getElementById("copy-text").innerHTML = "Failed to Copy URL"; }
+    document.body.removeChild(field);
 }
