@@ -159,7 +159,6 @@ normie = [
     'http',
     'html',
     'php',
-    'lol',
 ]
 
 words = normie + tech + hentai + legal + drugs
